@@ -1,351 +1,445 @@
 <!DOCTYPE html>
-<html lang="zh">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="theme-color" content="#3367D6"/>
-  <link rel="apple-touch-icon" href="/icons-192.png">
-  <link rel="manifest" href="/manifest.json">
-  
+<html 
+	lang="zh">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+<link rel="stylesheet" href="/css/layout.css">
 
+		
+		<title> Mysql元数据锁培训记录 -  亲爱的松前绪花</title>
+		<link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" />
+		<script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
+		<!-- lazyload -->
+		<script src="https://unpkg.com/lazysizes@5.1.0/lazysizes.min.js"></script>
+		<!-- smooth-scrolling -->
+		<script src="https://unpkg.com/smooth-scrolling.js@latest"></script>
+		<!-- highlight -->
+		<link rel="stylesheet" href="//unpkg.com/@highlightjs/cdn-assets@11.6.0/styles/atom-one-dark.min.css" />
+		<script src="//unpkg.com/@highlightjs/cdn-assets@11.6.0/highlight.min.js"></script>
+		<!-- 预置 kiraicon -->
+		<link rel="stylesheet" href="/lib/iconfont/iconfont.css" crossorigin />
+		<link
+			rel="shortcut icon"
+			href="/img/favicon.png"
+			type="image/jpg"
+		/>
+	<meta name="generator" content="Hexo 6.3.0"></head>
 
-  <meta name="generator" content="Hexo 6.3.0">
-
-  
-
-  
-
-  
-    <meta name="author" content="ohana">
-  
-
-  
-
-  
-
-  <title>meatdatalock | 亲爱的松前绪花</title>
-
-  
-
-  
-    <link rel="shortcut icon" href="/favicon.ico">
-  
-
-  
-
-  
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@1.1.3/index.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs@9.16.2/styles/monokai.css">
-  
-
-  
-<link rel="stylesheet" href="/css/style.css">
-
-</head>
-<body>
-  <div class="root-container">
-    
-<!-- header container -->
-<header class="header-container post">
-  
-    <div class="post-image" style="background-image: url(./meatdatalock/cover.png)"></div>
-  
-
-  <!-- navbar -->
-<nav class="navbar">
-  <div class="navbar-content">
-    <!-- logo -->
-    <div class="navbar-logo">
-      <a href="/">
-        
-          亲爱的松前绪花
-        
-      </a>
-    </div>
-    <!-- link -->
-    <div class="navbar-link">
-      <div class="navbar-btn">
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-      <ul class="navbar-list">
-        
-          <li class="navbar-list-item"><a href="/">首页</a></li>
-        
-          <li class="navbar-list-item"><a href="/links">友链</a></li>
-        
-          <li class="navbar-list-item"><a href="/about">关于</a></li>
-        
-      </ul>
-    </div>
-  </div>
-</nav>
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-    <div class="header-content">
-      <div class="post-text layout-block">
-        <div class="layout-margin">
-          <h1 class="title-wrap">meatdatalock</h1>
-          <h2 class="title-sub-wrap">
-            <strong>ohana</strong>
-            <span>发布于</span>
-            <time  class="article-date" datetime="2022-09-27T14:11:00.000Z" itemprop="datePublished">2022-09-27</time>
-          </h2>
-          <ul class="wrap-list dark">
-  
-</ul>
-          <ul class="wrap-list dark">
-  
-</ul>
-        </div>
-      </div>
-    </div>
-  
-
-  
-  
-  
-</header>
-
-    <!-- 文章 -->
-
-<!-- 文章内容 -->
-<div class="body-container">
-  <article class="content-container layout-block post-container">
-    <div class="article-info">
-      
-      
-      
-      
-      <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        <p>今天参加的mysql元数据锁相关培训整理（在写了）</p>
-
-      </section>
-
-      
-      
-        <nav class="article-nav">
-          
-          
-            <div class="article-nav-item layout-padding">
-  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
-    
-      <div class="card-cover" background-image-lazy data-img="./hexo_github_create_blog/cover.jpg"></div>
-    
-    <div class="card-text">
-      
-        <a href="/hexo_github_create_blog.html" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">Hexo+Github Pages搭建博客</h2>
-        </a>
-      
-      <div class="card-text--row">Older</div>
-    </div>
-  </article>
+	<body>
+		<div
+			class="kira-background"
+			style="background-image: url('/img/background.jpg')"
+		></div>
+		<div class="kira-header">
+    <a
+        class="kira-drawer-button mdui-ripple"
+        title="导航栏"
+        onclick="document.querySelector('.kira-sidebar-modal').classList.add('show');document.querySelector('.kira-sidebar#sidebar').classList.add('show');"
+    >
+        <i class="kirafont icon-menu"></i>
+    </a>
+    <a href="/" title="亲爱的松前绪花">
+        <img
+			src="/img/MatsumaeOhana.jpg"
+			alt="ohana"
+		/>
+    </a>
 </div>
-          
-        </nav>
-      
-
-      <section class="page-message-container layout-padding">
-        
-
-
+		<div class="kira-body">
+			<div class="kira-sidebar" id="sidebar">
+	<div class="kira-avatar mdui-ripple">
+		<a href="/img/MatsumaeOhana.jpg" title="ohana">
+			<img
+				src="/img/MatsumaeOhana.jpg"
+				alt="ohana"
+			/>
+		</a>
+	</div>
+	<div class="kira-count">
+		<div><span>文章</span>2</div>
+		<div><span>标签</span>3</div>
+		<div><span>分类</span>1</div>
+	</div>
+	<div class="kira-list">
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/"
+			title="回到首页"
+		>
+			<i
+				class="kirafont icon-home"
+			></i>
+			<div class="kira-list-item-content">回到首页</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/archive.html"
+			title="文章归档"
+		>
+			<i
+				class="kirafont icon-container"
+			></i>
+			<div class="kira-list-item-content">文章归档</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/about.html"
+			title="关于本人"
+		>
+			<i
+				class="kirafont icon-user"
+			></i>
+			<div class="kira-list-item-content">关于本人</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/friends.html"
+			title="我的朋友"
+		>
+			<i
+				class="kirafont icon-team"
+			></i>
+			<div class="kira-list-item-content">我的朋友</div>
+		</a>
+		
+	</div>
+	<aside id="kira-sidebar">
+		 <div class="kira-widget-wrap">
+	<div class="kira-widget kira-social">
+		<a
+			class="mdui-ripple"
+			href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2316350824&website=www.oicqzone.com"
+			target="_blank"
+			mdui-tooltip="{content: 'QQ'}"
+			style="
+				color: rgb(49, 174, 255);
+				background-color: rgba(49, 174, 255, .1);
+			"
+		>
+			<i
+				class="kirafont icon-QQ"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://space.bilibili.com/8807597"
+			target="_blank"
+			mdui-tooltip="{content: '哔哩哔哩'}"
+			style="
+				color: rgb(231, 106, 141);
+				background-color: rgba(231, 106, 141, .15);
+			"
+		>
+			<i
+				class="kirafont icon-bilibili"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://github.com/dandanmiao/"
+			target="_blank"
+			mdui-tooltip="{content: 'GitHub'}"
+			style="
+				color: rgb(25, 23, 23);
+				background-color: rgba(25, 23, 23, .15);
+			"
+		>
+			<i
+				class="kirafont icon-github"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://twitter.com/Mammie90496734/"
+			target="_blank"
+			mdui-tooltip="{content: 'Twitter'}"
+			style="
+				color: rgb(25, 23, 23);
+				background-color: rgba(25, 23, 23, .15);
+			"
+		>
+			<i
+				class="kirafont icon-twitter"
+			></i> </a
+		>
+	</div>
+</div>
   
-  
+<div class="kira-widget-wrap">
+  <h3 class="kira-widget-title">分类</h3>
+  <div class="kira-widget">
 
-  
-  
+    <ul class="category-list">
 
+      
 
-      </section>
-    </div>
-    <div class="widget-info">
-      <section class="widget-author widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
-  <div class="widget-body">
-    
-      <img src="./ohana.png" class="soft-size--round soft-style--box" alt="ohana">
-    
-    
-      <h2>ohana</h2>
-    
-    
-      <p>在梦想的岸，在少女的心</p>
-    
-
-    <div class="count-box">
-      <div class="count-box--item">
-        <svg class="icon icon-article" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
-  <path d="M240.51564747 647.74217627h196.07203239c16.59071043 0 30.16492806-13.57421762 30.16492805-30.16492806V165.10332731c0-33.18142087-30.16492806-60.32985613-60.32985612-60.32985611H245.04038668C225.43318342 104.7734712 210.35071939 119.85593522 210.35071939 139.46313845V617.57724821c0 16.59071043 13.57421762 30.16492806 30.16492808 30.16492806z m663.62841731-452.47392089v482.63884894c0 33.18142087-27.14843525 60.32985613-60.32985612 60.32985613H180.18579134c-33.18142087 0-60.32985613-27.14843525-60.32985612-60.32985613V195.26825538c-49.77213131 0-90.49478418 40.72265287-90.49478417 90.49478417v452.4739209c0 49.77213131 40.72265287 90.49478418 90.49478417 90.49478417h286.56681657c16.59071043 0 30.16492806 13.57421762 30.16492807 30.16492807s13.57421762 30.16492806 30.16492805 30.16492806h90.49478418c16.59071043 0 30.16492806-13.57421762 30.16492805-30.16492806s13.57421762-30.16492806 30.16492807-30.16492807h286.56681657c49.77213131 0 90.49478418-40.72265287 90.49478417-90.49478417V285.76303955c0-49.77213131-40.72265287-90.49478418-90.49478417-90.49478417zM587.41232014 647.74217627h191.54729318c19.60720323 0 34.68966726-15.08246403 34.68966729-34.68966727V134.93839925c0-16.59071043-13.57421762-30.16492806-30.16492808-30.16492805H617.57724821c-30.16492806 0-60.32985613 27.14843525-60.32985612 60.32985611v452.4739209c0 16.59071043 13.57421762 30.16492806 30.16492805 30.16492806z" fill="currentColor"></path>
-</svg>
-        <span>2</span>
-      </div>
-      <div class="count-box--item">
-        <svg class="icon icon-categories" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
-  <path d="M900.3614811 257.09082106h-339.81629553l-67.96326003-101.9448889c-19.41807444-29.12711113-48.54518557-43.69066667-82.52681443-43.69066667H123.6385189c-53.39970333 0-97.09036999 43.69066667-97.09037113 97.09036999v582.54222222c0 53.39970333 43.69066667 97.09036999 97.09037113 97.09037002h776.7229622c53.39970333 0 97.09036999-43.69066667 97.09037113-97.09037002V354.18119104c0-53.39970333-43.69066667-97.09036999-97.09037113-97.09036998z m-97.09036999 242.72592554H220.72888889c-24.27259221 0-48.54518557-24.27259221-48.54518556-48.54518556s24.27259221-48.54518557 48.54518556-48.54518444h582.54222222c24.27259221 0 48.54518557 24.27259221 48.54518556 48.54518444s-24.27259221 48.54518557-48.54518556 48.54518556z" fill="currentColor"></path>
-</svg>
-        2
-      </div>
-      <div class="count-box--item">
-        <svg class="icon icon-tags" viewBox="0 0 1098 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
-  <path d="M283.42180005 272q0-28.38857157-20.09142843-48.48000001t-48.47999998-20.09142842-48.48000002 20.09142842-20.09142846 48.48000001 20.09142846 48.48 48.48000002 20.09142843 48.47999998-20.09142843 20.09142843-48.48zM855.0332285 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.03999997 263.58857157q-20.9142853 19.81714313-48.75428534 19.81714312-28.38857157 0-48.20571468-19.81714312l-383.04-383.58857157q-20.36571468-19.81714313-34.55999999-54.10285688t-14.19428534-62.6742853l0-222.85714313q0-27.84000002 20.36571469-48.20571469t48.2057147-20.36571466l222.85714313 0q28.38857157 0 62.6742853 14.19428529t54.65142842 34.55999999l383.04000001 382.49142843q19.81714313 20.9142853 19.81714314 48.75428532zM1060.74751475 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.04 263.58857157q-20.9142853 19.81714313-48.75428531 19.81714312-19.26857155 0-31.61142843-7.47428531t-28.38857159-24.13714314l251.79428534-251.7942853q19.81714313-19.81714313 19.81714308-48.20571469 0-27.84000002-19.81714308-48.75428531l-383.04000001-382.49142845q-20.36571468-20.36571468-54.65142842-34.55999999t-62.67428532-14.19428534l120 0q28.38857157 0 62.67428532 14.19428534t54.65142842 34.55999999l383.03999998 382.49142845q19.81714313 20.9142853 19.81714314 48.75428531z" fill="currentColor"></path>
-</svg>
-        2
-      </div>
-    </div>
-  </div>
-</section>
 
       
 
       
-<section class="widet-notice widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
-  <div class="widget-title">
-    <svg class="icon icon-notice" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
-  <path d="M512 945.02305225v28.15620663a24.27259221 24.27259221 0 0 1-24.27259221 24.27259335H394.0352a48.54518557 48.54518557 0 0 1-41.74885888-23.78714112l-110.68302222-184.47170332a132.04290333 132.04290333 0 0 1-17.47626667-48.54518557h118.4502511a200.97706667 200.97706667 0 0 1 76.21594113 14.56355556l20.38897777 133.49925888a48.54518557 48.54518557 0 0 0 36.40888888 27.67075555l16.01991111 2.91271112a24.27259221 24.27259221 0 0 1 20.38897778 25.72894889zM997.45185223 463.45481443a194.18074112 194.18074112 0 0 1-38.8361489 116.50844445 24.75804445 24.75804445 0 0 1-36.4088889 0l-34.95253333-34.95253333a24.27259221 24.27259221 0 0 1-2.91271111-30.58346667 97.09036999 97.09036999 0 0 0 0-106.79940665 24.27259221 24.27259221 0 0 1 2.91271111-30.58346666l34.95253333-34.95253334a24.75804445 24.75804445 0 0 1 18.93262223-7.28177777 26.2144 26.2144 0 0 1 17.47626667 9.70903665A194.18074112 194.18074112 0 0 1 997.45185223 463.45481443z m-194.18074112-388.36148111v776.72296335a48.54518557 48.54518557 0 0 1-48.54518556 48.54518443h-28.64165888a48.54518557 48.54518557 0 0 1-33.98163001-14.07810332l-145.63555556-143.20829668A291.27111111 291.27111111 0 0 0 342.57730333 657.63555556H172.18370333a145.63555556 145.63555556 0 0 1-145.63555556-145.63555556v-97.09036999a145.63555556 145.63555556 0 0 1 145.63555556-145.63555556h170.3936a291.27111111 291.27111111 0 0 0 206.31703779-85.43952668l145.63555555-143.20829554a48.54518557 48.54518557 0 0 1 33.98162888-14.07810446H754.72592555a48.54518557 48.54518557 0 0 1 48.54518556 48.54518555z" fill="currentColor"></path>
-</svg>
-    <span>NOTICE</span>
-  </div>
-  <div class="widget-body">
-    <p>暂时先这样，回头把自动部署搞上，再搞得花哨一点</p>
-  </div>
-</section>
 
+      <li class="category-list-item">
+        <a class="category-list-link" href="/categories/学习/">学习</a>
+        <span class="category-list-count">2</span>
+      </li>
 
-      <section class="widget-categorys widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
-  <div class="widget-title">
-    <svg class="icon icon-categories" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
-  <path d="M900.3614811 257.09082106h-339.81629553l-67.96326003-101.9448889c-19.41807444-29.12711113-48.54518557-43.69066667-82.52681443-43.69066667H123.6385189c-53.39970333 0-97.09036999 43.69066667-97.09037113 97.09036999v582.54222222c0 53.39970333 43.69066667 97.09036999 97.09037113 97.09037002h776.7229622c53.39970333 0 97.09036999-43.69066667 97.09037113-97.09037002V354.18119104c0-53.39970333-43.69066667-97.09036999-97.09037113-97.09036998z m-97.09036999 242.72592554H220.72888889c-24.27259221 0-48.54518557-24.27259221-48.54518556-48.54518556s24.27259221-48.54518557 48.54518556-48.54518444h582.54222222c24.27259221 0 48.54518557 24.27259221 48.54518556 48.54518444s-24.27259221 48.54518557-48.54518556 48.54518556z" fill="currentColor"></path>
-</svg>
-    <span>CATEGORYS</span>
-  </div>
-  <div class="widget-body">
-    <ul class="categorys-list">
-      
-        <li class="categorys-list-item">
-          <a href="/categories/%E6%95%99%E7%A8%8B/">
-            教程 (1)
-          </a>
-        </li>
-      
-        <li class="categorys-list-item">
-          <a href="/categories/%E6%95%99%E7%A8%8B/%E5%AD%A6%E4%B9%A0/">
-            学习 (1)
-          </a>
-        </li>
       
     </ul>
-  </div>
-</section>
 
-      <section class="widget-tags widget-item  layout-margin content-padding--primary soft-size--large soft-style--box">
-  <div class="widget-title">
-    <svg class="icon icon-tags" viewBox="0 0 1098 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
-  <path d="M283.42180005 272q0-28.38857157-20.09142843-48.48000001t-48.47999998-20.09142842-48.48000002 20.09142842-20.09142846 48.48000001 20.09142846 48.48 48.48000002 20.09142843 48.47999998-20.09142843 20.09142843-48.48zM855.0332285 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.03999997 263.58857157q-20.9142853 19.81714313-48.75428534 19.81714312-28.38857157 0-48.20571468-19.81714312l-383.04-383.58857157q-20.36571468-19.81714313-34.55999999-54.10285688t-14.19428534-62.6742853l0-222.85714313q0-27.84000002 20.36571469-48.20571469t48.2057147-20.36571466l222.85714313 0q28.38857157 0 62.6742853 14.19428529t54.65142842 34.55999999l383.04000001 382.49142843q19.81714313 20.9142853 19.81714314 48.75428532zM1060.74751475 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.04 263.58857157q-20.9142853 19.81714313-48.75428531 19.81714312-19.26857155 0-31.61142843-7.47428531t-28.38857159-24.13714314l251.79428534-251.7942853q19.81714313-19.81714313 19.81714308-48.20571469 0-27.84000002-19.81714308-48.75428531l-383.04000001-382.49142845q-20.36571468-20.36571468-54.65142842-34.55999999t-62.67428532-14.19428534l120 0q28.38857157 0 62.67428532 14.19428534t54.65142842 34.55999999l383.03999998 382.49142845q19.81714313 20.9142853 19.81714314 48.75428531z" fill="currentColor"></path>
-</svg>
-    <span>TAGS</span>
   </div>
-  <div class="widget-body">
-    <div class="tags-cloud">
-      <a href="/tags/git/" style="font-size: 10px;" class="tags-cloud-0">git</a> <a href="/tags/hexo/" style="font-size: 10px;" class="tags-cloud-0">hexo</a>
-    </div>
-  </div>
-</section>
-    </div>
-  </article>
+</div>
+  
+<div class="kira-widget-wrap">
+	<div id="randomtagcloud" class="kira-widget tagcloud kira-rainbow"><a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a></div>
+	
 </div>
 
-    <!-- footer container -->
-<footer id="footer" class="footer">
-  <div class="footer-container">
-    
-    <div class="social-icons">
-      
-        
-      
-        
-      
-        
-      
-        
-          <a href="https://github.com/dandanmiao/" class="soft-size--primary soft-style--box" target="_blank" rel="noopener noreferrer">
-            <svg class="icon icon-github" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
-  <path d="M64.6 512c0 195.6 125.4 361.9 300.1 422.9 23.5 5.9 19.9-10.8 19.9-22.2v-77.6c-135.8 15.9-141.3-74-150.5-89-18.5-31.5-61.9-39.5-49-54.5 31-15.9 62.5 4 98.9 58 26.4 39.1 77.9 32.5 104.1 26 5.7-23.5 17.9-44.5 34.7-60.9-140.7-25.2-199.4-111.1-199.4-213.3 0-49.5 16.4-95.1 48.4-131.8-20.4-60.6 1.9-112.4 4.9-120.1 58.2-5.2 118.5 41.6 123.3 45.3 33.1-8.9 70.8-13.7 112.9-13.7 42.4 0 80.3 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.4-43.9 2.9 7.7 24.7 58.3 5.5 118.1 32.5 36.8 49 82.8 49 132.4 0 102.3-59 188.3-200.2 213.2 23.5 23.3 38.1 55.5 38.1 91.1v112.7c0.8 9 0 17.9 15.1 17.9C832.7 877 960.4 709.4 960.4 512.1c0-247.5-200.6-447.9-447.9-447.9C265 64.1 64.6 264.5 64.6 512z"></path>
-</svg>
-          </a>
-        
-      
-        
-          <a href="https://twitter.com/Mammie90496734" class="soft-size--primary soft-style--box" target="_blank" rel="noopener noreferrer">
-            <svg class="icon icon-twitter" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
-  <path d="M962.285714 233.142857q-38.285714 56-92.571429 95.428571 0.571429 8 0.571429 24 0 74.285714-21.714286 148.285714t-66 142-105.428571 120.285714-147.428571 83.428571-184.571429 31.142857q-154.857143 0-283.428571-82.857143 20 2.285714 44.571429 2.285714 128.571429 0 229.142857-78.857143-60-1.142857-107.428571-36.857143t-65.142857-91.142857q18.857143 2.857143 34.857143 2.857143 24.571429 0 48.571429-6.285714-64-13.142857-106-63.714286t-42-117.428571l0-2.285714q38.857143 21.714286 83.428571 23.428571-37.714286-25.142857-60-65.714286t-22.285714-88q0-50.285714 25.142857-93.142857 69.142857 85.142857 168.285714 136.285714t212.285714 56.857143q-4.571429-21.714286-4.571429-42.285714 0-76.571429 54-130.571429t130.571429-54q80 0 134.857143 58.285714 62.285714-12 117.142857-44.571429-21.142857 65.714286-81.142857 101.714286 53.142857-5.714286 106.285714-28.571429z"></path>
-</svg>
-          </a>
-        
-      
+ 
+	</aside>
+	<div class="kira-copyright">
+		&copy; 2022
+		<a href="/">ohana</a
+		>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> &
+		<!-- TODO: github 链接 -->
+		<a href="https://github.com/ch1ny/kira-hexo/" target="_blank">Kira-Hexo</a>
+		<br />
+		
+		
+	</div>
+</div>
+<div class="kira-sidebar-modal" id="sidebar-modal" onclick="(function(self) {
+	self.classList.remove('show');
+	document.querySelector('.kira-sidebar.show#sidebar').classList.remove('show');
+})(this)"></div>
+			<div class="kira-content">
+				<div id="kira-top-header"></div>
+				<div class="kira-main-content">
+					
+<link rel="stylesheet" href="/css/kira-image.css">
+
+<script src="/js/kira-image.js"></script>
+<div class="kira-image">
+    <div class="kira-image-modal">
+        <div class="kira-image-header">
+            <div class="kira-image-counter"></div>
+            <div class="kira-image-title"></div>
+            <div class="kira-image-operation">
+                <div class="kira-image-operation-button" id="kira-image-operation-button-zoom">
+                    <i class="kirafont icon-zoom-in"></i>
+                </div>
+                <div class="kira-image-operation-button" id="kira-image-operation-button-close">
+                    <i class="kirafont icon-close"></i>
+                </div>
+            </div>
+        </div>
+        <div class="kira-image-container">
+            <div class="kira-image-prev-button-panel">
+                <div class="kira-image-exchange-button">
+                    <i class="kirafont icon-left"></i>
+                </div>
+            </div>
+            <div class="kira-image-list">
+                <div class="kira-image-prev">
+                    <img />
+                </div>
+                <div class="kira-image-now">
+                    <img />
+                </div>
+                <div class="kira-image-next">
+                    <img />
+                </div>
+            </div>
+            <div class="kira-image-next-button-panel">
+                <div class="kira-image-exchange-button">
+                    <i class="kirafont icon-right"></i>
+                </div>
+            </div>
+        </div>
     </div>
-     
-    <p>&copy; 2022 <a href="/" target="_blank">ohana</a></p>
+</div>
+<div class="kira-post">
+	<article>
+		
+		<div class="kira-post-cover">
+			<img
+				data-src="/meatdatalock/cover.png"
+				data-sizes="auto"
+				alt="Mysql元数据锁培训记录"
+				class="lazyload  kira-post-cover-image"
+			/>
+			<h1>Mysql元数据锁培训记录</h1>
+		</div>
+		
+		<div class="kira-post-meta kira-rainbow" style="margin:10px 0!important;">
+			<a><i class="kirafont icon-calendar-fill"></i>2022年09月27日</a>
+			<a><i class="kirafont icon-areachart"></i>1.1k 字</a>
+			<a><i class="kirafont icon-time-circle-fill"></i>大概 4 分钟</a>
+		</div>
+		<p>元数据（metadata lock）锁培训记录</p>
+<h3><span id="mysql中锁的分类">mysql中锁的分类</span></h3><p><img data-fancybox="gallery" data-sizes="auto" data-src="/meatdatalock/mysql_lock.png" alt="mysql_lock.png" class="lazyload"></p>
+<h3><span id="元数据锁介绍">元数据锁介绍</span></h3><p>MDL（metadata lock），即元数据锁，从MySQL 5.5开始引入，他是基于表元数据（表结构）的锁， MDL锁是为了<strong>保证并发环境下元数据和表数据结构的一致性</strong>。<br>如果有事务对表加了MDL锁，那么其他事务就不能对表结构进行变更，同样对于正在进行表结构变 更的事务也不允许其他事务对表数据进行增删改查，MDL锁主要用于<strong>保证DDL操作与DML操作之间的一致性</strong>。</p>
+<p>MDL锁用于保护表的元数据信息，在表上有活动事务（显式或隐式）的时候，不可以对元数据进行写入操作。</p>
+<p>元数据锁是MySQL Server层的锁，表级锁，每执行一条DQL、DML、DDL语句时都会申请MDL锁，<br>DQL和DML操作需要MDL共享锁，DDL操作需要MDL排它锁，<strong>申请MDL锁的操作会形成一个队列，队列中写锁获取优先级高于读锁。</strong><br>一旦出现写锁等待，不但当前操作会被阻塞，同时还会阻塞后续该表的所有操作。事务一旦申请到 MDL锁后，直到事务执行完才会将锁释放。MDL不仅适用于表，还适用于模式（schema）和触发器。</p>
+<h3><span id="元数据锁的分类">元数据锁的分类</span></h3><p>重点掌握前三种,其他了解即可</p>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>锁类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td><strong>SHARED_READ</strong></td>
+<td><strong>共享读锁用于读取数据，例如事务中的查询行数据</strong></td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>SHARED_WRITE</strong></td>
+<td><strong>共享写锁用于修改数据，例如插入更新或删除事务中的行</strong></td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>EXCLUSIVE</strong></td>
+<td><strong>排他锁可以修改字典和数据，比如alter table</strong></td>
+</tr>
+<tr>
+<td>4</td>
+<td>SHARED_READ_ONLY</td>
+<td>只读锁，常见于lock table x read</td>
+</tr>
+<tr>
+<td>5</td>
+<td>SHARED_NO_WRITE</td>
+<td>共享非写锁允许读取数据并阻止其他 事务 修改数据。 用于alter table的第一阶段</td>
+</tr>
+<tr>
+<td>6</td>
+<td>SHARED_NO_READ_WRITE</td>
+<td>用于访问字典，读写数据，阻塞其他事务读写数据，如lock table write</td>
+</tr>
+<tr>
+<td>7</td>
+<td>SHARED</td>
+<td>共享锁用于访问字典对象而不访问数据，如create table a like b</td>
+</tr>
+<tr>
+<td>8</td>
+<td>INTENTION_EXCLUSIVE</td>
+<td>意向排他锁只用于范围锁，如锁lock table write</td>
+</tr>
+<tr>
+<td>9</td>
+<td>SHARED_UPGRADABLE</td>
+<td>SHARED_UPGRADABLE 是一个可升级的共享元数据锁，加锁期间，允许并发查询和更新，常用在 DDL 操作的第一阶段</td>
+</tr>
+<tr>
+<td>10</td>
+<td>SHARED_HIGH_PRIO</td>
+<td>仅访问字典对象，例如 desc table_a，仅对MyISAM存储引擎有效</td>
+</tr>
+</tbody></table>
+<h3><span id="各个场景下的冲突">各个场景下的冲突</span></h3><p><strong>MDL的读锁（共享锁）和写锁（排它锁）的阻塞关系如下：</strong></p>
+<ul>
+<li>共享锁和排它锁之间相互阻塞，即同一个表上的DML和DDL之间互相阻塞。</li>
+<li>排它锁和排它锁之间互相阻塞，即两个session不能对表同时做表定义变更，需要串行操作。</li>
+<li>共享锁和共享锁之间不会因MDL产生阻塞。</li>
+</ul>
+<h3><span id="可能引发的问题">可能引发的问题</span></h3><p>(1) 即使普通的SELECT查询操作，都是要持有锁，类型是SHARED_READ。<br>(2) 如果当前有未提交的活动事务，不允许执行alter table这种DDL。<br>(3) 如果当前DDL是hang（等待无响应），其他会话即使仅做查询SELECT，都会hang。</p>
+<p>假设如果当前有未提交的活动事务,此时如果需要执行DDL语句,会因没有获取到MDL锁而陷入等待,<br>同时阻塞队列中其他对表的增删改查操作,直至未提交事务提交,DDL语句执行完毕且提交事务,才会继续执行后续操作<br>因此极易引起系统响应慢甚至超时的情况。</p>
+<h3><span id="规避方法">规避方法</span></h3><p>程序开发侧 :</p>
+<ul>
+<li>规范使用事务，及时提交事务，避免使用大事务；</li>
+<li>少用工具开启事务进行查询，图形化工具要及时关闭；</li>
+<li>DDL操作放在业务低峰期执行，通过SQL审核系统定时晚上执行；</li>
+<li>若以查询为主，建议默认不开启事务；</li>
+</ul>
+<p>运维侧 :</p>
+<ul>
+<li>监控元数据锁</li>
+</ul>
+<p>元数据锁故障处理方法 :</p>
+<ul>
+<li>找到阻塞元数据锁的源头，将事务提交或回滚，或等待事务执行完成；</li>
+<li>终止申请元数据锁的语句，如终止alter table语句；</li>
+<li>重启应用服务释放元数据锁；</li>
+<li>重启数据库实例释放锁。</li>
+</ul>
 
-    
+	</article>
 
-    <p>Powered by <a href="https://hexo.io" target="_blank" rel="noopener noreferrer">Hexo</a> Theme - <a href="https://github.com/miiiku/flex-block" target="_blank" rel="noopener noreferrer author">flex-block</a></p>
-
-    <p>
-      <a href="javascript:;" id="theme-light">🌞 浅色</a>
-      <a href="javascript:;" id="theme-dark">🌛 深色</a>
-      <a href="javascript:;" id="theme-auto">🤖️ 自动</a>
-    </p>
-  </div>
-</footer>
-  </div>
-
-  <div class="back-to-top-fixed soft-size--round soft-style--box">
-    <svg class="icon icon-back-to-top" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
-      <path d="M725.333333 426.666667c-12.8 0-21.333333-4.266667-29.866667-12.8l-213.333333-213.333333c-17.066667-17.066667-17.066667-42.666667 0-59.733333s42.666667-17.066667 59.733333 0l213.333333 213.333333c17.066667 17.066667 17.066667 42.666667 0 59.733333C746.666667 422.4 738.133333 426.666667 725.333333 426.666667z"></path>
-      <path d="M298.666667 426.666667c-12.8 0-21.333333-4.266667-29.866667-12.8-17.066667-17.066667-17.066667-42.666667 0-59.733333l213.333333-213.333333c17.066667-17.066667 42.666667-17.066667 59.733333 0s17.066667 42.666667 0 59.733333l-213.333333 213.333333C320 422.4 311.466667 426.666667 298.666667 426.666667z"></path>
-      <path d="M512 896c-25.6 0-42.666667-17.066667-42.666667-42.666667L469.333333 170.666667c0-25.6 17.066667-42.666667 42.666667-42.666667s42.666667 17.066667 42.666667 42.666667l0 682.666667C554.666667 878.933333 537.6 896 512 896z"></path>
-    </svg>
-  </div>
+	 
+    <div class="kira-post-copyright">
+        <strong>本文作者：</strong>ohana<br>
+        <strong>本文链接：</strong><a href="http://ohanasuki.com/meatdatalock.html" title="http:&#x2F;&#x2F;ohanasuki.com&#x2F;meatdatalock.html" target="_blank" rel="noopener">http:&#x2F;&#x2F;ohanasuki.com&#x2F;meatdatalock.html</a><br>
+        
+            <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+        
+    </div>
 
   
-  <!-- aplayer -->
+	<div class="kira-post-nav">
+		<nav class="post-nav">
+			  
+			<!-- 先找到与当前文字相同的目录 -->
+			      
+			<!-- 在找到当前文章所在的 index -->
+			    
+			<!-- 上一篇文章 -->
+			<div class="old">
+				<span>上一章</span>
+				<a href="/hexo_github_create_blog.html"> Hexo+Github Pages搭建博客</a>
+			</div>
+			          
+		</nav>
+	</div>
+	
+	<div class="kira-post-meta kira-rainbow">
+		
+			<a class="kirafont icon-appstore-fill -link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a>
+		
+		
+			<a class="kirafont icon-tag-fill -none-link" href="/tags/mysql/" rel="tag">mysql</a>
+		
+	</div>
+	
+	<div class="kira-post-footer">
+	<link rel="stylesheet" href="https://unpkg.com/gitalk@latest/dist/gitalk.css" />
+	<div id="gitalk"></div>
+	<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+	<script type="text/javascript">
+		var gitalk = new Gitalk({
+			clientID: '-id-',
+			clientSecret: '-key-',
+			id: 'Mysql元数据锁培训记录',
+			repo: '-issue repo name-',
+			owner: '-your github username-',
+			admin: '-your github username-',
+			title: '',
+		});
+		gitalk.render('gitalk');
+	</script>
 
+</div>
+	
+</div>
 
-<!-- dplayer -->
+				</div>
+			</div>
+			<div class="kira-right-column">
+	<a onclick="document.querySelector('#kira-top-header').scrollIntoView({behavior: 'smooth'});" class="kira-backtotop" aria-label="回到顶部" title="回到顶部">
+		<button class="mdui-fab mdui-ripple">
+			<i class="kirafont icon-caret-up"></i>
+		</button>
+	</a>
+</div>
 
-
-
-
-  
-
-
-  
-
-
-  
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-  
-  <!-- 尾部用户自定义相关内容 -->
-</body>
+		</div>
+	</body>
 </html>
