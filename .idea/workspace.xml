@@ -2,56 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ac498f8-f0ae-453d-a6bc-aab301fc269e" name="Changes" comment="1.0！">
-      <change beforePath="$PROJECT_DIR$/archives/2022/09/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/archives/2022/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/archives/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articles/hello-world.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articles/hexo_github_create_blog.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articles/hexo_github_create_blog/commit_new_file.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articles/hexo_github_create_blog/create_new_file.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articles/hexo_github_create_blog/create_repository.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articles/hexo_github_create_blog/create_repository_name.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articles/hexo_github_create_blog/domain_hello_world.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articles/hexo_github_create_blog/github_setting.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articles/hexo_github_create_blog/hello_world.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articles/hexo_github_create_blog/img.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articles/hexo_github_create_blog/img_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articles/hexo_github_create_blog/index.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articles/hexo_github_create_blog/parse.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articles/hexo_github_create_blog/rule.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/banner.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/categories/教程/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/categories/教程/学习/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hexo_github_create_blog.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hexo_github_create_blog/commit_new_file.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hexo_github_create_blog/cover.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hexo_github_create_blog/create_new_file.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hexo_github_create_blog/create_repository.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hexo_github_create_blog/create_repository_name.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hexo_github_create_blog/domain_hello_world.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hexo_github_create_blog/github_setting.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hexo_github_create_blog/hello_world.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hexo_github_create_blog/img.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hexo_github_create_blog/img_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hexo_github_create_blog/index.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hexo_github_create_blog/parse.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hexo_github_create_blog/rule.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons-192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons-512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/meatdatalock.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/meatdatalock/cover.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ohana.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/ABC/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/git/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/helloWord/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/hexo/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/k48/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/ohana/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

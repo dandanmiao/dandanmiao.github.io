@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh" style="background-image: url(/banner.png)">
+<html lang="zh" style="background-image: url(/backgroundimg/cover.jpg)">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,7 +26,7 @@
 
   
 
-  <title>文章归档 | 亲爱的松前绪花</title>
+  <title>加了个背景图片 | 亲爱的松前绪花</title>
 
   
 
@@ -49,9 +49,9 @@
   <div class="root-container">
     
 <!-- header container -->
-<header class="header-container">
+<header class="header-container post">
   
-    <div class="post-image" style="background-image: url(/banner.png)"></div>
+    <div class="post-image" style="background-image: url(/backgroundimg/cover.jpg)"></div>
   
 
   <!-- navbar -->
@@ -99,36 +99,103 @@
 
   
   
-
-  
-  
     <div class="header-content">
-      <div class="post-text layout-block layout-padding">
-        <h1 class="title-wrap">文章归档</h1>
-        
+      <div class="post-text layout-block">
+        <div class="layout-margin">
+          <h1 class="title-wrap">加了个背景图片</h1>
+          <h2 class="title-sub-wrap">
+            <strong>ohana</strong>
+            <span>发布于</span>
+            <time  class="article-date" datetime="2022-10-07T11:05:41.000Z" itemprop="datePublished">2022-10-07</time>
+          </h2>
+          <ul class="wrap-list dark">
+  
+    <li><a href="/categories/%E5%AD%A6%E4%B9%A0/">📒 学习</a></li>
+  
+</ul>
+          <ul class="wrap-list dark">
+  
+    <li><a href="/tags/css/">🏷️ css</a></li>
+  
+</ul>
+        </div>
       </div>
     </div>
+  
+
+  
   
   
 </header>
 
-    <!-- 分页(其他自定义页面) -->
+    <!-- 文章 -->
 
-<!-- 自定义页面 -->
-
+<!-- 文章内容 -->
 <div class="body-container">
   <article class="content-container layout-block post-container">
     <div class="article-info">
       
+      
+      
+      
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        
+        <h3 id="加之前的首页和内容"><a href="#加之前的首页和内容" class="headerlink" title="加之前的首页和内容"></a>加之前的首页和内容</h3><p><img src="/backgroundimg/befor_index.png" alt="befor_index.png"><img src="/backgroundimg/befor_post.png" alt="befor_post.png"></p>
+<h3 id="加之后的首页和内容"><a href="#加之后的首页和内容" class="headerlink" title="加之后的首页和内容"></a>加之后的首页和内容</h3><p><img src="/img.png" alt="after_index.png"><img src="/img_1.png" alt="after_post.png"></p>
+<h3 id="1-在themes-flex-block-layout-layout-ejs的标签里增加属性"><a href="#1-在themes-flex-block-layout-layout-ejs的标签里增加属性" class="headerlink" title="1.在themes\flex-block\layout\layout..ejs的标签里增加属性"></a>1.在themes\flex-block\layout\layout..ejs的<html>标签里增加属性</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">style=&quot;&lt;%= `background-image: url($&#123;page.cover || theme.banner&#125;)` %&gt;&quot;</span><br></pre></td></tr></table></figure>
+<h3 id="1-更改themes-flex-block-source-css-style-css"><a href="#1-更改themes-flex-block-source-css-style-css" class="headerlink" title="1.更改themes\flex-block\source\css\style.css"></a>1.更改themes\flex-block\source\css\style.css</h3><ul>
+<li><p>html标签新增样式（红框为新增部分）</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">background-repeat</span>: no-repeat;</span><br><span class="line"><span class="attribute">background-position</span>: center;</span><br><span class="line"><span class="attribute">background-attachment</span>: fixed;</span><br><span class="line"><span class="attribute">background-size</span>: cover;</span><br></pre></td></tr></table></figure>
+<p><img src="/backgroundimg/html_css.png" alt="html_css.png"></p>
+</li>
+<li><p>.root-container类删除样式（红框为删除部分）</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.root-container</span> </span><br></pre></td></tr></table></figure>
+<p><img src="/backgroundimg/root_css.png" alt="root_css.png"></p>
+</li>
+</ul>
+<p>此时样式结果如图<br><img src="/backgroundimg/no_body.png" alt="no_body.png"></p>
+<ul>
+<li>body标签新增样式和效果图（红框为新增部分）<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">background-color</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, <span class="number">0.3</span>)</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p><img src="/backgroundimg/body_css.png" alt="body_css.png"><br><img src="/backgroundimg/result.png" alt="result.png"></p>
+
       </section>
 
       
       
+        <nav class="article-nav">
+          
+          
+            <div class="article-nav-item layout-padding">
+  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
+    
+      <div class="card-cover" background-image-lazy data-img="/click-and-img/cover.png"></div>
+    
+    <div class="card-text">
+      
+        <a href="/click-and-img.html" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">加了个鼠标点击特效和图片点击放大</h2>
+        </a>
+      
+      <div class="card-text--row">Older</div>
+    </div>
+  </article>
+</div>
+          
+        </nav>
+      
 
-      
-      
+      <section class="page-message-container layout-padding">
+        
+
+
+  
+  
+
+  
+  
+
+
+      </section>
     </div>
     <div class="widget-info">
       <section class="widget-author widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
@@ -165,6 +232,8 @@
     </div>
   </div>
 </section>
+
+      
 
       
 <section class="widet-notice widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
@@ -216,7 +285,6 @@
     </div>
   </article>
 </div>
-
 
     <!-- footer container -->
 <footer id="footer" class="footer">
